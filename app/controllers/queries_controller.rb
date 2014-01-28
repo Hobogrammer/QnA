@@ -37,6 +37,7 @@ class QueriesController < ApplicationController
       redirect_to queries_url, notice: 'Query destroyed'
     else
       redirect_to queries_url, notice: 'Could not destroy query'
+    end
   end
 
   private
