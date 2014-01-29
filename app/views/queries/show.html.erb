@@ -10,5 +10,10 @@
   <%= @query.answer %>
 </p>
 
+<p>
+  <strong>Last Edited by: </strong>
+  <%= @query.users.last.email %> | <strong><%= link_to "Full list", query_users_path(@query) %></strong>
+</p>
+
 <%= link_to 'Edit', edit_query_path(@query) %> |
 <%= link_to 'Back', queries_path %>

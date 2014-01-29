@@ -1,5 +1,5 @@
 class QueriesController < ApplicationController
-  before_action :set_query, only: [:show, :edit, :update, :destroy]
+  before_action :set_query, only: [:show, :edit, :update, :destroy, :show_users]
 
   def index
     @queries = Query.all
@@ -18,6 +18,7 @@ class QueriesController < ApplicationController
   def create
     @query = Query.new(query_params)
     if @query.save
+      current_user.queries << @query
       redirect_to @query, notice: 'Query was successfully created.'
     else
       render action: 'new'
@@ -26,6 +27,7 @@ class QueriesController < ApplicationController
 
   def update
     if @query.update(query_params)
+      current_user.queries << @query
       redirect_to @query, notice: 'Query was successfully updated.'
     else
       render action: 'edit'
@@ -38,6 +40,10 @@ class QueriesController < ApplicationController
     else
       redirect_to queries_url, notice: 'Could not destroy query'
     end
+  end
+
+  def show_users
+    @changed_users = @query.users
   end
 
   private

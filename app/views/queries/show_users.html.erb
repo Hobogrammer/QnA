@@ -1,0 +1,16 @@
+<h1>Query Change History</h2>
+
+<table>
+    <thead>
+      <tr>
+        <th>User Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @changed_users.each do |user| %>
+        <tr>
+          <td><%= user.email %></td>
+        </tr>
+      <%  end %>
+      </tbody>
+</table>
