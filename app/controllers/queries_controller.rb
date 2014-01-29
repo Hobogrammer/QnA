@@ -1,4 +1,5 @@
 class QueriesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show, :show_users]
   before_action :set_query, only: [:show, :edit, :update, :destroy, :show_users]
 
   def index
