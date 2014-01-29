@@ -1,0 +1,8 @@
+sky:
+  id: 1
+  question: Why is the sky blue?
+  answer: physics
+
+sun:
+  question: What is the sun?
+  answer: a big ball of exploding physics
