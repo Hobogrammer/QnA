@@ -6,11 +6,13 @@ gem 'rails', '4.0.2'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'jbuilder', '~> 1.2'
+gem 'less-rails'
 gem 'pg'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
+gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.3.0'
 
 
