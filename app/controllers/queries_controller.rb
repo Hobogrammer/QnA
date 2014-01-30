@@ -44,7 +44,7 @@ class QueriesController < ApplicationController
   end
 
   def show_users
-    @changed_users = @query.users
+    @changed_users = @query.users.uniq
   end
 
   private
