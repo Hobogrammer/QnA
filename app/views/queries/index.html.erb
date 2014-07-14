@@ -16,9 +16,9 @@
       <tr>
         <td><%= query.question %></td>
         <td><%= query.answer %></td>
-        <td><%= link_to 'Show', query %></td>
-        <td><%= link_to 'Edit', edit_query_path(query) %></td>
-        <td><%= link_to 'Destroy', query, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', query, :class => "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_query_path(query), :class => "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', query, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Query', new_query_path %>
+<%= link_to 'New Query', new_query_path, :class => "btn btn-success" %>
